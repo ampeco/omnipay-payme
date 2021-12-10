@@ -1,0 +1,24 @@
+{
+    "name": "ampeco/omnipay-payme",
+    "description": "Omnipay plugin for https://www1.payme.co.il",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Ampeco\\OmnipayPayMe\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Alexander Alexiev",
+            "email": "alexander.alexiev@ampeco.com"
+        },
+        {
+            "name": "Tihomir Tonov",
+            "email": "tihomir.tonov@ampeco.com"
+        }
+    ],
+    "require": {
+        "omnipay/common": "^3"
+    }
+}
