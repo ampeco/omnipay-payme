@@ -25,7 +25,7 @@ class Response extends AbstractResponse implements ResponseInterface, RedirectRe
 
     public function isSuccessful()
     {
-        return $this->statusCode < 400 && @$this->getStatusCode() === 0;
+        return $this->statusCode < 400 && @$this->getCode() === 0;
     }
 
     public function isRedirect()
@@ -43,8 +43,13 @@ class Response extends AbstractResponse implements ResponseInterface, RedirectRe
         return @$this->data['payme_sale_id'];
     }
 
-    public function getStatusCode()
+    public function getCode()
     {
         return @$this->data['status_code'];
+    }
+
+    public function getMessage()
+    {
+        return @$this->data['status_error_details'];
     }
 }
